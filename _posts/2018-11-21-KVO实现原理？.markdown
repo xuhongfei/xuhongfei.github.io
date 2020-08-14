@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "KVO实现原理？"
+date:   2018-11-21 17:00:00 +0800
+categories: original
+---
+
+1、KVO是Objective-C观察者设计模式的一种实现。（KVO机制指定一个被观察者对象，当被观察者对象的某个属性发生改变时，对象会获得通知并作出相应的处理。）
+
+2、KVO的实现依赖于runtime，使用isa-swizzling（isa混写）来实现。
+
+3、观察对象A时，KVO动态创建一个继承自对象A的新类NSKVONotifying_A，并且为NSKVONotifying_A重写观察属性的setter方法，该setter方法负责在调用原setter方法之前和之后，通知所有观察属性值的变更情况。
+
+4、A实例的isa指针会从指向A类修改为指向新创建的NSKVONotifying_A类，来实现当前类键值改变的监听。
+
+5、NSKVONotifying_A的setter方法：KVO的键值观察通知依赖于NSObject的willChangeValueForKey:和didChangeValueForKey:，在存取数值的前后分别调用这两个方法。被观察属性被改变之前调用willChangeValueForKey:通知系统该keyPath的属性值即将被改变；被观察属性被改变之后调用didChangeValueForKey:通知系统该keyPath的属性值已经被改变；然后observeValueForKey:ofObject:change:context:被调用。所有这一切都发生在运行时而不是编译时。
+
+6、怎么改变被观察者属性是会触法KVO？通过setter方法或者KVC。直接修改属性对应的成员变量不会触发KVO。
+
+------
+
+7、KVO使用：addObserver:forKeyPath:options:context:注册观察者实施监听；observeValueForKeyPath:ofObject:change:context:进行属性变化后的回调处理；一定要移除观察者。
