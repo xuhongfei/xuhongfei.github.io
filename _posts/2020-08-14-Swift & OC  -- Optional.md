@@ -20,7 +20,7 @@ categories: original
 
 ## OC & swift 中定义 Optional
 
-![OC&Swift_optional_compare.webp]({{ site.url }}/_assets/images/2020-08-14/OC&Swift_optional_compare.webp)
+![OC&Swift_optional_compare.webp]({{ site.url }}/assets/images/2020-08-14/OC&Swift_optional_compare.webp)
 
 
 ## OC optional
