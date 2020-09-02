@@ -5,7 +5,7 @@ date:       2020-09-02 16:50:00 +0800
 categories: reprint
 ---
 
-转载自【 https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b 】
+转载自【[https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b](https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b)】
 
 # Test Listeners
 在`XCUITests`中，listeners就是Obervers。iOS提供给开发者`XCTestObservation` protocol 来实现，以帮助开发者获得test run过程中的回调。允许开发者自定义`XCUITests`报告和log。  
@@ -91,12 +91,12 @@ class TestObserver: NSObject, XCTestObservation {
 
 # Refer
 
-[https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b]https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b
+[https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b](https://medium.com/@nshthshah/xcuitests-test-listeners-f09cdb35164b)
 
-[https://www.iosdev.recipes/os-signpost/]https://www.iosdev.recipes/os-signpost/
+[https://www.iosdev.recipes/os-signpost/](https://www.iosdev.recipes/os-signpost/)
 
-[https://developer.apple.com/documentation/bundleresources/information_property_list/nsprincipalclass]https://developer.apple.com/documentation/bundleresources/information_property_list/nsprincipalclass
+[https://developer.apple.com/documentation/bundleresources/information_property_list/nsprincipalclass](https://developer.apple.com/documentation/bundleresources/information_property_list/nsprincipalclass)
 
-[https://developer.apple.com/documentation/xctest/xctestobservation]https://developer.apple.com/documentation/xctest/xctestobservation
+[https://developer.apple.com/documentation/xctest/xctestobservation](https://developer.apple.com/documentation/xctest/xctestobservation)
 
-[https://developer.apple.com/documentation/foundation/bundle/1409048-principalclass]https://developer.apple.com/documentation/foundation/bundle/1409048-principalclass
+[https://developer.apple.com/documentation/foundation/bundle/1409048-principalclass](https://developer.apple.com/documentation/foundation/bundle/1409048-principalclass)
